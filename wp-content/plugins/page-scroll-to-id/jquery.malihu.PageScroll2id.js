@@ -25,7 +25,7 @@
 				e.preventDefault();
 				var $this=$(this);
 				var scrollTarget=$this.attr("href").split("#");
-				var scrollToPos=$("#"+scrollTarget[1]).offset().top;
+				var scrollToPos=$("#"+scrollTarget[1]).offset().top-100;
 				var docHeight=$(document).height();
 				if(options.layout==="horizontal"){ //x-axis
 					scrollToPos=$("#"+scrollTarget[1]).offset().left; 

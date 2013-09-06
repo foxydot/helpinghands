@@ -5,28 +5,11 @@
 	<div id="home-top">
 	        
 		<div class="home-top-left">
-			<?php if (!dynamic_sidebar('Home Top Left')) : ?>
-			<div class="widget">
-				<?php /*?><?php if( function_exists('wp_cycle') ) : ?>
-					<?php wp_cycle(); ?>
-				<?php endif; ?><?php */?>
-                <?php if ( function_exists( "easingsliderlite" ) ) { easingsliderlite(); } ?>
-			
-			</div>			
-			<?php endif; ?>
+			<?php genesis_loop(); ?>
 
 		</div><!-- end .home-top-left -->
 		
-		<div id="forabout" style="height:100px;">&nbps;</div>
-		<?php /*?><div class="home-top-right">
-		
-			<?php if (!dynamic_sidebar('Home Top Right')) : ?>
-			<div class="widget">
-				<h4><?php _e("Home Top Right", 'genesis'); ?></h4>
-				<p><?php _e("This is a widgeted area which is called Home Top Right. It is using the Genesis - Featured Page widget to display what you see on the Metric child theme demo site. To get started, log into your WordPress dashboard, and then go to the Appearance > Widgets screen. There you can drag the Genesis - Featured Page widget into the Home Top widget area on the right hand side.", 'genesis'); ?></p>
-			</div>			
-			<?php endif; ?>
-		</div><!-- end .home-top-right --><?php */?>
+		<div id="forabout">&nbsp;</div>
 				
 	</div><!-- end #home-top -->
 </div><!-- end #home-top-bg -->
