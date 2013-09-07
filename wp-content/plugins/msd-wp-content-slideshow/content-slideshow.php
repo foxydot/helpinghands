@@ -1,6 +1,6 @@
 <?php
 
-        $direct_path =  get_bloginfo('wpurl')."/wp-content/plugins/wp-content-slideshow";
+        $direct_path =  plugin_dir_path('msd-wp-content-slideshow/msd-wp-content-slideshow');
         $c_slideshow_class = c_slideshow_get_dynamic_class();
 
 ?>
@@ -66,7 +66,6 @@ width:<?php $content_nav_width = get_option('content_nav_width'); if(!empty($con
 margin:0;
 padding: 0;
 float:right;
-overflow:hidden;
 }
 
 #content-slideshow .slideshow-nav li {
@@ -94,18 +93,18 @@ display:block;
 margin:0px !important;
 float: left;
 padding: 0px !important;
+height: 20%;
+border-bottom: 1px solid #CCC;
+background: #e8e8e5;
+
+border-top: 1px solid #f1f1f1;
 }
 
 #content-slideshow .slideshow-nav li a {
-width: 253px;
 display: block;
 color: #333;
 overflow: hidden;
-background-color: #EEE;
 font-weight: bold;
-border-bottom: 1px solid #CCC;
-background: #e8e8e5;
-border-top: 1px solid #f1f1f1;
 padding: 11px 12px 1px 15px;
 font-size: 12px;
 line-height: 18px;
@@ -113,21 +112,15 @@ line-height: 18px;
 
 #content-slideshow .slideshow-nav li p {
 float: left;
-font-size: 12px;
 font-weight: normal;
 padding-top: 1px;
 }
 
-<?php /*?>#content-slideshow .slideshow-nav li.on a {
-background-color: #<?php $nav_bg_active_color = get_option('content_nav_active_bg'); if(!empty($nav_bg_active_color)) {echo $nav_bg_active_color;} else {echo "CCC";}?>;
-color:#fff;
-}<?php */?>
 
-<?php /*?>#content-slideshow .slideshow-nav li a:hover,
+#content-slideshow .slideshow-nav li a:hover,
 #content-slideshow .slideshow-nav li a:active {
-color:#<?php $nav_color = get_option('content_nav_active_color'); if(!empty($nav_color)) {echo $nav_color;} else {echo "FFF";}?>;
-background-color: #<?php $nav_bg_active_color = get_option('content_nav_active_bg'); if(!empty($nav_bg_active_color)) {echo $nav_bg_active_color;} else {echo "CCC";}?>;
-}<?php */?>
+color:#<?php $nav_color = get_option('content_nav_active_color'); if(!empty($nav_color)) {echo $nav_color;} else {echo "666";}?>;
+}
 
 .<?php echo $c_slideshow_class;?> {
 font-size: 10px;
@@ -151,82 +144,55 @@ line-height: 10px !important;
 
 			<?php
                         
-                        $counting = 1;
-                        
-                        $sort = get_option('content_sort'); if(empty($sort)){$sort = "post_date";}
-                        $order = get_option('content_order'); if(empty($order)){$order = "DESC";}
-                        
-                        global $wpdb;
+                $counting = 1;
                 
-                        global $post;
-                        
-                        $args = array( 'meta_key' => 'content_slider', 'meta_value'=> '1', 'suppress_filters' => 0, 'post_type' => array('post', 'page'), 'orderby' => $sort, 'order' => $order);
-                        
-                        $myposts = get_posts( $args );
-                        
-                        foreach( $myposts as $post ) :	setup_postdata($post);
-                                				
-				$custom = get_post_custom($post->ID);
-				
-				$thumb = get_generated_thumb("content_slider");
-				
+                $sort = get_option('content_sort'); if(empty($sort)){$sort = "post_date";}
+                $order = get_option('content_order'); if(empty($order)){$order = "DESC";}
+
+                $all_post_types = get_post_types(array('public'=>TRUE));
+                $args = array( 'meta_key' => 'content_slider', 'meta_value'=> '1', 'suppress_filters' => 1, 'post_type' => $all_post_types, 'orderby' => $sort, 'order' => $order);
+                global $post;
+                $myposts = get_posts( $args );
+                foreach( $myposts AS $post ) :	
+                    setup_postdata($post);
 			?>
 
 				<li id="main-post-<?php echo $counting;?>" onclick="location.href='<?php the_permalink(); ?>';" title="<?php _e("Permanent Link to"); ?> <?php the_title(); ?>">
-					<?php the_post_thumbnail('full');?>
+					<?php the_post_thumbnail('event-slide');?>
+					<div class="view-event-button">View Event</div>
 				</li>
 
 			<?php
 			
-			$counting = $counting + 1;
+			$counting++;
 			
 			endforeach; ?>
-
 			</ul>
 
 		</div>
 
 		<ul class="slideshow-nav">
 
-			<?php
-                        
-			global $wpdb;
-			
-			$counting = 1;
-			
-			global $post;
-                        
-                        $args = array( 'meta_key' => 'content_slider', 'meta_value'=> '1', 'suppress_filters' => 0, 'post_type' => array('post', 'page'), 'orderby' => $sort, 'order' => $order);
-                        
-                        $myposts = get_posts( $args );
-                        
-                        foreach( $myposts as $post ) :	setup_postdata($post);
+			<?php			
+			$counting = 1;                        
+            foreach( $myposts as $post ) :	
+                setup_postdata($post);
                                 				
 				$custom = get_post_custom($post->ID);
                                 
                         ?>
-
-			<?php if ( $counting == 1 ) { ?>
-				<li class="on clearfix" id="post-<?php echo $counting; ?>">
+            <?php $active = ($counting == 1)?' on':''; ?>
+				<li class="clearfix<?php print $active; ?>" id="post-<?php echo $counting; ?>">
 					<a href="#main-post-<?php echo $counting; ?>" title="<?php the_title(); ?>">
 						<h2><?php echo cut_content_feat(get_the_title(), 25, "..."); ?></h2>
 						<?php $excerpt = get_the_excerpt();?>
-						<p><?php echo cut_content_feat($excerpt, 35, "..."); ?> </p> 
+						<p><?php echo cut_content_feat($excerpt, 70, "..."); ?> </p> 
 					</a>
 				</li>
-			<?php } else { ?>
-				<li id="post-<?php echo $counting; ?>" class="clearfix">
-					<a href="#main-post-<?php echo $counting; ?>" title="<?php the_title(); ?>">
-						<h2><?php echo cut_content_feat(get_the_title(), 25, "..."); ?></h2>
-						<?php $excerpt = get_the_excerpt();?>
-						<p><?php echo cut_content_feat($excerpt, 35, "..."); ?> </p>
-					</a>
-				</li>
-			<?php } ?>
 
 			<?php
 			
-			$counting = $counting + 1;
+			$counting++;
 			
 			endforeach; ?>
 

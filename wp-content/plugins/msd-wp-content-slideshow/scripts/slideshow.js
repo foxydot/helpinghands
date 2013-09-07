@@ -21,7 +21,7 @@ $slideshow = {
             pager: jQuery('ul.slideshow-nav', $slideshow.context),
             pagerAnchorBuilder: $slideshow.startTabs,
             before: $slideshow.Tabactive,
-	    timeout: $slideshow.timeout,
+	        timeout: $slideshow.timeout,
             speed: $slideshow.slideSpeed,
             fastOnEvent: $slideshow.tabSpeed,
             pauseOnPagerHover: true,

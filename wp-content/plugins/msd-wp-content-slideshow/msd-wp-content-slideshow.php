@@ -1,31 +1,31 @@
 <?php
 /*
-Plugin Name: WP Content Slideshow
-Plugin URI: http://www.iwebix.de/wp-content-slideshow-javascript-slideshow-plugin/
-Description: This Plugin shows up to 5 Posts or Pages with a short description and a title at the right, and a image for every post/page on the left.
+Plugin Name: MSD WP Content Slideshow
+Description: Fork of WP Content Slideshow to add CPT support. This Plugin shows up to 5 Posts or Pages with a short description and a title at the right, and a image for every post/page on the left.
 Version: 2.3
-Author: Dennis Nissle, IWEBIX
-Author URI: http://www.iwebix.de/
 */
 
 /* options page */
 
 
-$options_page = get_option('siteurl') . '/wp-admin/admin.php?page=wp-content-slideshow/options.php';
+$options_page = get_option('siteurl') . '/wp-admin/admin.php?page=msd-wp-content-slideshow/options.php';
 function slideshow_options_page() {
-	add_options_page('WP Content Slideshow Options', 'WP Content Slideshow', 10, 'wp-content-slideshow/options.php');
+	add_options_page('WP Content Slideshow Options', 'WP Content Slideshow', 10, 'msd-wp-content-slideshow/options.php');
 }
 
 add_action('admin_menu', 'slideshow_options_page');
 
 function add_content_scripts() {
     if ( !is_admin() ) {
-	wp_register_script('jquery.cycle', get_bloginfo('url') . '/wp-content/plugins/wp-content-slideshow/scripts/jquery.cycle.all.2.72.js', array('jquery'), '1.3' );
+	wp_register_script('jquery.cycle', plugin_dir_url('msd-wp-content-slideshow/msd-wp-content-slideshow').'/scripts/jquery.cycle.all.2.72.js', array('jquery'), '1.3' );
 	wp_enqueue_script('jquery.cycle');
-	wp_register_script('jquery.slideshow', get_bloginfo('url') . '/wp-content/plugins/wp-content-slideshow/scripts/slideshow.js', array('jquery'), '1.3' );
+	wp_register_script('jquery.slideshow', plugin_dir_url('msd-wp-content-slideshow/msd-wp-content-slideshow').'/scripts/slideshow.js', array('jquery'), '1.3' );
 	wp_enqueue_script('jquery.slideshow');
     }
 }
+
+add_image_size('event-slide',690,320,TRUE);
+
 
 add_action('wp_enqueue_scripts', 'add_content_scripts');
 
@@ -43,8 +43,10 @@ add_action('save_post', 'save_content');
 
 
 function content_init(){
-    add_meta_box("content_slider", "WP Content Slideshow Options", "content_meta", "post", "normal", "high");
-    add_meta_box("content_slider", "WP Content Slideshow Options", "content_meta", "page", "normal", "high");
+    $all_post_types = get_post_types(array('public'=>TRUE));
+    foreach($all_post_types AS $post_type){
+        add_meta_box("content_slider", "WP Content Slideshow Options", "content_meta", $post_type, "normal", "high");
+    }
 }
 
 function content_meta(){
@@ -67,13 +69,15 @@ function save_content(){
     if ( defined('DOING_AUTOSAVE') && DOING_AUTOSAVE ) 
     return $post_id;
     global $post;
-    if($post->post_type == "post" || $post->post_type == "page") {
+        $all_post_types = get_post_types(array('public'=>TRUE));
+    
+    if(in_array($post->post_type,$all_post_types)) {
 	update_post_meta($post->ID, "content_slider", $_POST["content_slider"]);
     }
 }
 
 function insert_content($atts, $content = null) {
-    include (ABSPATH . '/wp-content/plugins/wp-content-slideshow/content-slideshow.php');
+    include ('content-slideshow.php');
 }
 add_shortcode("contentSlideshow", "insert_content");
 

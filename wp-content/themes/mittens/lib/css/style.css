@@ -260,13 +260,6 @@ img.wp-smiley,img.wp-wink{float:none;border:none;margin:0;padding:0}
 .icontw{background:url(../../images/sociallinks.png) no-repeat -27px -3px;width:20px;height:17px;float:left;border-right:1px solid #ccc;padding:0 1px}
 .icongp{background:url(../../images/sociallinks.png) no-repeat -56px -3px;width:25px;height:20px;float:left}
 .imgHolder{float:left}
-.eventList{float:right;width:302px}
-.eventList .event:first-child{border:0}
-.eventList .event{background:#e8e8e5;border-top:1px solid #f1f1f1;padding:11px 12px 1px 15px;font-size:12px;line-height:18px}
-#content-slideshow .slideshow-nav li a:hover,#content-slideshow .slideshow-nav li a:active,#content-slideshow .slideshow-nav li.on a,.eventList .event.active{background:url(../../images/active-event.png) no-repeat left center;margin-left:-20px !important;padding-left:34px !important;border-color:transparent !important;color:#09f !important}
-.eventList .event h2{text-transform:uppercase}
-.viewpreviousevents{text-align:right;padding:50px 0}
-.viewpreviousevents a{background:#74a5a7;color:#fff !important;padding:14px 59px;border-radius:5px;font-size:18px}
 .entry-title{display:none}
 .contenthead{border:0 !important;font-size:28px !important;line-height:40px;font-weight:normal !important}
 .contenthead2{border:0 !important;color:#bdbdbd !important;font-size:13px !important;margin:0 !important}
