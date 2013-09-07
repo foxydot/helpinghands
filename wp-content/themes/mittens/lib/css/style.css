@@ -5,7 +5,6 @@ a img{border:none}
 a:focus,a:hover,a:active{outline:none}
 .home #wrap,.home-page #wrap,.blog #wrap{margin:0 auto 0;padding:0;min-width:960px}
 #wrap{background:#f7f7f7 ;margin:0 auto 0;padding:0}
-.home #header{margin:0 auto 0;padding:0;background:#7498a7;position:fixed;top:0;z-index:9999;width:100%}
 .page #header{margin:0 auto 0;padding:0;background:#9aa774}
 #header .wrap{width:960px;height:100px;margin:0 auto 0}
 #title-area{width:340px;float:left;margin:0;padding:20px 0 0 0;overflow:hidden}
@@ -20,7 +19,6 @@ a:focus,a:hover,a:active{outline:none}
 #header .widget-area h4{color:#fff;font-size:14px;font-weight:normal;margin:10px 0 0 0;padding:0;text-decoration:none}
 #header .widget-area ul{margin:0;padding:0}
 #header .widget-area ul li{list-style-type:square;margin:0 0 0 20px;padding:0}
-.home #title-area{background:url(../../images/logo.png) left no-repeat}
 .page #title-area{background:url(../../images/logo-inner.png) left no-repeat}
 .header-image #title-area,.header-image #title-area #title,.header-image #title-area #title a{display:block;float:left;width:340px;height:100px;margin:0;padding:0;text-indent:-9999px;overflow:hidden}
 .header-image #title-area #description{display:block;width:0;height:0;overflow:hidden}

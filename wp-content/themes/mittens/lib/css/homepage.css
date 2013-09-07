@@ -1,3 +1,5 @@
+.home #header{margin:0 auto 0;padding:0;background:#7498a7;position:fixed;top:0;z-index:9999;width:100%}
+.home #title-area{background:url(../../images/logo.png) left no-repeat}
 .scroll-anchor{height:0}
 #home-top-bg #home-top{width:100%;background-image:url(../../images/happyfamily.jpg);-webkit-background-size:cover;-moz-background-size:cover;-o-background-size:cover;background-size:cover;margin:0 auto 0;padding:0 0 0 0;overflow:hidden}#home-top-bg #home-top a,#home-top-bg #home-top a:visited{color:#fff;text-decoration:none}
 #home-top-bg #home-top a:hover{color:#fff;text-decoration:underline}
