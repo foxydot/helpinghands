@@ -9,14 +9,14 @@
 
 		</div><!-- end .home-top-left -->
 		
-		<div id="forabout">&nbsp;</div>
 				
 	</div><!-- end #home-top -->
 </div><!-- end #home-top-bg -->
 
-<div id="home-middle-bg" class="homemidbg1">
+		<div id="forabout" class="scroll-anchor"></div>
+<div id="homemidbg1" class="home-middle-bg">
 
-	<div id="home-middle">
+	<div class="home-middle">
 		<div class="home-middle-1">
 			<?php if (!dynamic_sidebar('Home Middle #1')) : ?>
 			<div class="widget">
@@ -26,13 +26,13 @@
 			<?php endif; ?>
 
 		</div><!-- end .home-middle-1 -->
-               <div id="forevents" style="height:96px;">&nbsp;</div>
     </div><!-- end #home-middle -->  
 </div><!-- end #home-middle-bg -->
 
-<div id="home-middle-bg" class="homemidbg2">
+               <div id="forevents" class="scroll-anchor"></div>
+<div id="homemidbg2" class="home-middle-bg">
 
-	<div id="home-middle">
+	<div class="home-middle">
 		<div class="home-middle-2">
         	
 			<?php ///if (!dynamic_sidebar('Home Middle #2')) : ?>
@@ -45,14 +45,14 @@
             </div>
 			<?php //endif; ?>
 		</div><!-- end .home-middle-2 -->
-         <div id="forcontribution" style="height:95px;">&nbsp;</div>
     </div><!-- end #home-middle -->
 
 </div><!-- end #home-middle-bg -->
 
-<div id="home-middle-bg" class="homemidbg3">
+         <div id="forcontribution" class="scroll-anchor"></div>
+<div id="homemidbg3" class="home-middle-bg">
 
-	<div id="home-middle">
+	<div class="home-middle">
 		<div class="home-middle-3">
 			<?php if (!dynamic_sidebar('Home Middle #3')) : ?>
 			<div class="widget">
@@ -63,12 +63,12 @@
 		</div><!-- end .home-middle-3 -->
                 
     </div><!-- end #home-middle -->
-<div id="forinvolved" style="height:134px;">&nbsp;</div>
 </div><!-- end #home-middle-bg -->
 
-<div id="home-middle-bg" class="homemidbg4">
+<div id="forinvolved" class="scroll-anchor"></div>
+<div id="homemidbg4" class="home-middle-bg">
 
-	<div id="home-middle">
+	<div class="home-middle">
 		<div class="home-middle-3">
 			<?php if (!dynamic_sidebar('Home Middle #4')) : ?>
 			<div class="widget">
@@ -77,14 +77,14 @@
 			</div>		
 			<?php endif; ?>
 		</div><!-- end .home-middle-3 -->
-      <div id="forsponsors" style="height:95px;">&nbsp;</div>
     </div><!-- end #home-middle -->
 
 </div><!-- end #home-middle-bg -->
 
-<div id="home-middle-bg" class="homemidbg5">
+      <div id="forsponsors" class="scroll-anchor"></div>
+<div id="homemidbg5" class="home-middle-bg">
 
-	<div id="home-middle">
+	<div class="home-middle">
 		<div class="home-middle-3">
 			<?php if (!dynamic_sidebar('Home Middle #5')) : ?>
 			<div class="widget">
@@ -93,14 +93,14 @@
 			</div>		
 			<?php endif; ?>
 		</div><!-- end .home-middle-3 -->
-<div id="forcontact" style="height:95px;">&nbsp;</div>
     </div><!-- end #home-middle -->
 
 </div><!-- end #home-middle-bg -->
 
-<div id="home-middle-bg" class="homemidbg6">
+<div id="forcontact" class="scroll-anchor"></div>
+<div id="homemidbg6" class="home-middle-bg">
 
-	<div id="home-middle">
+	<div class="home-middle">
 		<div class="home-middle-3">
 			<?php if (!dynamic_sidebar('Home Middle #6')) : ?>
 			<div class="widget">
