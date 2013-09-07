@@ -38,7 +38,7 @@
 			<?php ///if (!dynamic_sidebar('Home Middle #2')) : ?>
             <h4>Events</h4>
 			<div class="widget">
-				<?php include (ABSPATH . '/wp-content/plugins/wp-content-slideshow/content-slideshow.php'); ?>
+				<?php do_shortcode('[contentSlideshow]'); ?>
 			</div>
             <div class="viewpreviousevents">
             	<a href="" class="">View Previous Events</a>

@@ -133,6 +133,8 @@ function custom_footer_creds_text() {
     echo '</div>';
 }
 
+include_once('lib/inc/events_cpt.php');
+
 /*
  * Add styles and scripts
 */
