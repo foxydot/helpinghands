@@ -6,6 +6,10 @@ require_once(TEMPLATEPATH.'/lib/init.php');
 add_image_size('Slideshow', 500, 260, TRUE);
 add_image_size('Mini', 90, 90, TRUE);
 
+
+remove_action( 'genesis_before_post_content', 'genesis_post_info' ); //remove the info (date, posted by,etc.)
+remove_action( 'genesis_after_post_content', 'genesis_post_meta' ); //remove the meta (filed under, tags, etc.)
+
 // Add widgeted footer section
 add_action('genesis_before_footer', 'metric_include_footer_widgets'); 
 function metric_include_footer_widgets() {
@@ -145,11 +149,9 @@ function msdlab_add_menu(){
 add_action('loop_start','msdlab_fancy_title');
 function msdlab_fancy_title(){
     if(!is_front_page()){
-        if(is_page()){
-            remove_action('genesis_post_title','genesis_do_post_title');
-            if(has_post_thumbnail()){
-                add_action('genesis_post_title','msd_fancy_post_title');
-            }
+        remove_action('genesis_post_title','genesis_do_post_title');
+        if(has_post_thumbnail()){
+            add_action('genesis_post_title','msd_fancy_post_title');
         }
     }
 }
@@ -238,6 +240,8 @@ function msdlab_add_scripts() {
         }
     }
 }
+
+
 
 /*
  * A useful troubleshooting function. Displays arrays in an easy to follow format in a textarea.

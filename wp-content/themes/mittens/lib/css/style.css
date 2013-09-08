@@ -5,7 +5,7 @@ a img{border:none}
 a:focus,a:hover,a:active{outline:none}
 .home #wrap,.home-page #wrap,.blog #wrap{margin:0 auto 0;padding:0;min-width:960px}
 #wrap{background:#f7f7f7 ;margin:0 auto 0;padding:0}
-.page #header{margin:0 auto 0;padding:0;background:#9aa774}
+#header{margin:0 auto 0;padding:0;background:#9aa774}
 #header .wrap{width:960px;height:100px;margin:0 auto 0}
 #title-area{width:340px;float:left;margin:0;padding:20px 0 0 0;overflow:hidden}
 #title-area #title{font-size:20px;font-weight:normal;line-height:34px;margin:0;padding:0 0 0 20px}
@@ -19,7 +19,7 @@ a:focus,a:hover,a:active{outline:none}
 #header .widget-area h4{color:#fff;font-size:14px;font-weight:normal;margin:10px 0 0 0;padding:0;text-decoration:none}
 #header .widget-area ul{margin:0;padding:0}
 #header .widget-area ul li{list-style-type:square;margin:0 0 0 20px;padding:0}
-.page #title-area{background:url(../../images/logo-inner.png) left no-repeat}
+#title-area{background:url(../../images/logo-inner.png) left no-repeat}
 .header-image #title-area,.header-image #title-area #title,.header-image #title-area #title a{display:block;float:left;width:340px;height:100px;margin:0;padding:0;text-indent:-9999px;overflow:hidden}
 .header-image #title-area #description{display:block;width:0;height:0;overflow:hidden}
 .header-full-width #title-area,.header-full-width #title-area #title{width:960px}
@@ -116,6 +116,8 @@ a:focus,a:hover,a:active{outline:none}
 .author-box img{background:#fff;float:left;margin:0 10px 0 0;padding:4px;border:1px solid #ddd}
 #content h1,#content h2,#content h3,#content h4,#content h5,#content h6{color:#444;font-weight:normal;text-decoration:none;margin:0 0 5px 0;padding:0}
 #content h1{font-size:20px;border-bottom:1px solid #ddd;margin:0;padding:0 0 5px 0}
+#content h1.fancy,#content h1.archive-title{background-color:#9aa774;background-repeat:no-repeat;background-position:top left;padding:260px 0 20px 20px;font-size:30px;color:#fff;margin-bottom:1em}
+.post-type-archive-event #content h1.archive-title{background-image:url(../../images/events-bkg.jpg)}
 #content h2{font-size:18px;border-bottom:1px solid #ddd;margin:0;padding:0 0 5px 0}
 #content h2 a,#content h2 a:visited{color:#444;text-decoration:none}
 #content h2 a:hover{color:#73ab01;text-decoration:none}
@@ -257,14 +259,13 @@ img.wp-smiley,img.wp-wink{float:none;border:none;margin:0;padding:0}
 .fbshare{background:url(../../images/shareicons.png) no-repeat;width:74px;height:30px;float:left}
 .twshare{background:url(../../images/shareicons.png) no-repeat -73px 0;width:74px;height:30px;float:left}
 .iconfb{background:url(../../images/sociallinks.png) no-repeat 0 -3px;width:20px;height:17px;float:left;border-right:1px solid #ccc}
-.icontw{background:url(../../images/sociallinks.png) no-repeat -27px -3px;width:20px;height:17px;float:left;border-right:1px solid #ccc;padding:0 1px}
-.icongp{background:url(../../images/sociallinks.png) no-repeat -56px -3px;width:25px;height:20px;float:left}
+.icontw{display:none;background:url(../../images/sociallinks.png) no-repeat -27px -3px;width:20px;height:17px;float:left;border-right:1px solid #ccc;padding:0 1px}
+.icongp{display:none;background:url(../../images/sociallinks.png) no-repeat -56px -3px;width:25px;height:20px;float:left}
 .imgHolder{float:left}
-.entry-title{display:none}
 .contenthead{border:0 !important;font-size:28px !important;line-height:40px;font-weight:normal !important}
 .contenthead2{border:0 !important;color:#bdbdbd !important;font-size:13px !important;margin:0 !important}
 .block-two{padding-top:10px}
-.menu-sidebarmenu-container a{display:block;padding:10px;font-size:16px}
+.menu-sidebarmenu-container a{display:block;padding:.5em;font-size:12px}
 .menu-sidebarmenu-container .current-menu-item a{color:#fff;background:#9aa774}
 .top-footer{background:url(../../images/topfooterbg.png) repeat-x !important;height:auto !important;line-height:26px}
 .top-footer-widgeted{padding:20px;text-align:center;font-size:18px;text-shadow:none;color:#444;font-weight:normal}

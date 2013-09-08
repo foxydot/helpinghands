@@ -39,7 +39,7 @@ if (!class_exists('MSDEventCPT')) {
                 'labels' => $labels,
                 'hierarchical' => false,
                 'description' => 'event',
-                'supports' => array( 'title', 'editor', 'author', 'thumbnail', 'custom-fields' ),
+                'supports' => array( 'title', 'editor', 'author', 'thumbnail', 'custom-fields', 'genesis-cpt-archives-settings' ),
                 'taxonomies' => array(),
                 'public' => true,
                 'show_ui' => true,

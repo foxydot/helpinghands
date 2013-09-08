@@ -41,7 +41,7 @@
 				<?php do_shortcode('[contentSlideshow]'); ?>
 			</div>
             <div class="viewpreviousevents">
-            	<a href="" class="">View Previous Events</a>
+            	<a href="/event" class="">View Previous Events</a>
             </div>
 			<?php //endif; ?>
 		</div><!-- end .home-middle-2 -->
