@@ -119,6 +119,71 @@ function _default_headScripts(){
   wp_enqueue_style( 'jquery_ui', $jq_ui_css, FALSE, false, false );
 }
 
+add_action('genesis_header','msdlab_add_menu');
+function msdlab_add_menu(){
+    if(is_front_page()){
+        print '<ul class="added-menu">
+           <li><a href="#home-top-bg" rel="m_PageScroll2id">Home</a></li>
+           <li><a href="#forabout" rel="m_PageScroll2id">About</a></li>
+           <li><a href="#forevents" rel="m_PageScroll2id">Events</a></li>
+           <li><a href="#forcontribution" rel="m_PageScroll2id">Contribution</a></li>
+           <li><a href="#forsponsors" rel="m_PageScroll2id">Sponsors</a></li>
+           <li><a href="#forcontact" rel="m_PageScroll2id">Contact</a></li>
+        </ul>';
+    } else {
+        print '<ul class="added-menu">
+           <li><a href="/#home-top-bg">Home</a></li>
+           <li><a href="/#forabout">About</a></li>
+           <li><a href="/#forevents">Events</a></li>
+           <li><a href="/#forcontribution">Contribution</a></li>
+           <li><a href="/#forsponsors">Sponsors</a></li>
+           <li><a href="/#forcontact">Contact</a></li>
+        </ul>';
+    } 
+}
+
+add_action('loop_start','msdlab_fancy_title');
+function msdlab_fancy_title(){
+    if(!is_front_page()){
+        if(is_page()){
+            remove_action('genesis_post_title','genesis_do_post_title');
+            if(has_post_thumbnail()){
+                add_action('genesis_post_title','msd_fancy_post_title');
+            }
+        }
+    }
+}
+
+function msd_fancy_post_title(){
+    global $post;
+    $img = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'full' );
+    $title = apply_filters( 'genesis_post_title_text', get_the_title() );
+
+    if ( 0 === mb_strlen( $title ) )
+        return;
+
+    //* Link it, if necessary
+    if ( ! is_singular() && apply_filters( 'genesis_link_post_title', true ) )
+        $title = sprintf( '<a href="%s" title="%s" rel="bookmark">%s</a>', get_permalink(), the_title_attribute( 'echo=0' ), $title );
+
+    //* Wrap in H1 on singular pages
+    $wrap = is_singular() ? 'h1' : 'h2';
+
+    //* Also, if HTML5 with semantic headings, wrap in H1
+    $wrap = genesis_html5() && genesis_get_seo_option( 'semantic_headings' ) ? 'h1' : $wrap;
+
+    //* Build the output
+    $output = genesis_markup( array(
+        'html5'   => "<{$wrap} %s>",
+        'xhtml'   => sprintf( '<%s class="entry-title fancy" style="background-image:url('.$img[0].');">%s</%s>', $wrap, $title, $wrap ),
+        'context' => 'entry-title',
+        'echo'    => false,
+    ) );
+
+    $output .= genesis_html5() ? "{$title}</{$wrap}>" : '';
+
+    echo apply_filters( 'genesis_post_title_output', "$output \n" );
+}
 /** Customize the entire footer */
 remove_action( 'genesis_footer', 'genesis_do_footer' );
 add_action( 'genesis_footer', 'custom_footer_creds_text' );
