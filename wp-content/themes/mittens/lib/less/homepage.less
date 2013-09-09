@@ -82,7 +82,7 @@
   }
 
 .home-middle {
-  width: 960px;
+  max-width: 960px;
   margin: 0 auto 0;
   padding: 0 0 5px 0;
   overflow: hidden;
@@ -138,6 +138,7 @@
   list-style-type: none;
   margin: 0;
   padding: 0;
+  width: 100%;
   }
   
 .home-middle ul li {
@@ -210,6 +211,9 @@ width: 50%;
 
 #homemidbg1{
   background:#74a5a7 !important;
+  .home-middle{
+    background: url(../../images/about.png) no-repeat bottom right;
+  }
   h4{
     color: #f2dabc;
     font-size: 45px;
@@ -224,11 +228,6 @@ width: 50%;
   line-height: 34px;
   width: 47%;
   padding-bottom:100px;
-}
-.about-img{
-  position: absolute;
-  margin-top: -486px;
-  margin-left: 466px;
 }
 
 
@@ -319,6 +318,13 @@ font-size: 18px;
 
 #homemidbg3{
   background:#9aa774 !important;
+  padding: 0;
+  .home-middle{
+    background:url(../../images/contribution.png) no-repeat -118px 0px;
+  }
+  .home-middle-3 {
+    padding-top: 20px;
+  }
   h4{
     color: #ffffff;
     font-size: 45px;
@@ -398,7 +404,7 @@ font-size: 18px;
 
 .ui-widget-header{
   position: absolute;
-width: 960px;
+max-width: 960px;
 margin-top: -24px !important;
 }
 .vLeft{

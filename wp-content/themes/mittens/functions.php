@@ -212,12 +212,13 @@ function msdlab_add_styles() {
     global $is_IE;
     if(!is_admin()){
        wp_enqueue_style('msd-style',get_stylesheet_directory_uri().'/lib/css/style.css');
-       wp_enqueue_style('msd-style',get_stylesheet_directory_uri().'/lib/css/responsive.css');
+       wp_enqueue_style('msd-responsive',get_stylesheet_directory_uri().'/lib/css/responsive.css');
         if($is_IE){
             wp_enqueue_script('ie-style',get_stylesheet_directory_uri().'/lib/css/ie.css');
         }
         if(is_front_page()){
             wp_enqueue_style('msd-homepage-style',get_stylesheet_directory_uri().'/lib/css/homepage.css');
+            wp_enqueue_style('msd-homepage-responsive',get_stylesheet_directory_uri().'/lib/css/responsive-home.css');
         }
     }
 }

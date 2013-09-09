@@ -35,7 +35,7 @@ a:focus, a:hover, a:active {
   /*background: url(../../images/wrap.png) top center no-repeat;*/
   margin: 0 auto 0;
   padding: 0;
-  min-width: 960px;
+  min-width: 768px;
   }
   
 #wrap {
@@ -54,7 +54,8 @@ a:focus, a:hover, a:active {
   }
   
 #header .wrap {
-  width: 960px; 
+  max-width: 960px;
+  min-width: 768px;
   height: 100px;
   margin: 0 auto 0;
   }
@@ -165,7 +166,7 @@ a:focus, a:hover, a:active {
 /***** Image Header - Full Width ********************/
 
 .header-full-width #title-area, .header-full-width #title-area #title {
-  width: 960px;
+  min-width: 768px;
   }
   
 /***** Header Right Navigation ********************/
@@ -288,7 +289,9 @@ a:focus, a:hover, a:active {
 
 #nav .wrap {
   background: #00B8DE;
-  width: 960px;
+  
+  max-width: 960px;
+  min-width: 768px;
   height: 40px;
   margin: 0 auto 0;
   }
@@ -457,7 +460,9 @@ a:focus, a:hover, a:active {
 
 #subnav .wrap {
   background: #00A8D1;
-  width: 960px;
+  
+  max-width: 960px;
+  min-width: 768px;
   height: 40px;
   margin: 0 auto 20px;
   }
@@ -575,7 +580,6 @@ a:focus, a:hover, a:active {
 /***** Inner ********************/
 
 #inner {
-  width: 960px;
   margin: 20px auto 20px;
   padding: 0;
   overflow: hidden;
@@ -583,7 +587,7 @@ a:focus, a:hover, a:active {
   
 .home #inner, .home-page #inner, .blog #inner {
   width: 100%;
-  margin: 0;
+  margin: 0 auto;
   }
   
 /***** Inner Backgrounds ********************/
@@ -632,14 +636,17 @@ a:focus, a:hover, a:active {
 /***** Content-Sidebar Wrapper ********************/
 
 #content-sidebar-wrap {
-  width: 790px;
+  max-width: 960px;
+  min-width: 768px;
   margin: 0;
   padding: 0;
   float: left;
   }
 
 .sidebar-content #content-sidebar-wrap, .content-sidebar #content-sidebar-wrap {
-  width: 960px;
+  
+  max-width: 960px;
+  min-width: 768px;
   }
 
 .sidebar-sidebar-content #content-sidebar-wrap, .sidebar-content-sidebar #content-sidebar-wrap {
@@ -665,7 +672,7 @@ a:focus, a:hover, a:active {
   }
   
 .full-width-content #content {
-  width: 960px;
+  max-width: 960px;
   }
 
 #content img, #content p img {
@@ -1403,7 +1410,9 @@ border-bottom: 2px solid #ccc;
   }
   
 #footer-widgeted .wrap {
-  width: 960px;
+  
+  max-width: 960px;
+  min-width: 768px;
   margin: 0 auto 0;
   }
   
@@ -1503,7 +1512,9 @@ line-height: 30px;
   }
 
 #footer .wrap {
-  width: 960px;
+  
+  max-width: 960px;
+  min-width: 768px;
 margin: 0 auto 0;
 padding: 30px 0 50px;
   }
