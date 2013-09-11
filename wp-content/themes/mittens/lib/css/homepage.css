@@ -7,7 +7,7 @@
 #home-top-bg #home-top .more-link:hover{text-decoration:none}
 #home-top-bg #home-top .home-top-left{margin:0;padding:0;position:relative;height:694px}#home-top-bg #home-top .home-top-left .entry{position:absolute;height:30%;width:60%;font-size:1.5em;line-height:1.2em;bottom:0;right:0;background:#000;color:#fff;padding:.5em 1em}
 .home-middle-bg{background:#f7f7f7;padding:20px 0 0 0}
-.home-middle{width:960px;margin:0 auto 0;padding:0 0 5px 0;overflow:hidden}
+.home-middle{max-width:960px;margin:0 auto 0;padding:0 0 5px 0;overflow:hidden}
 .home-middle a,.home-middle a:visited{color:#7ca513;text-decoration:none}
 .home-middle a:hover{color:#7ca513;text-decoration:underline}
 .home-middle p{margin:0;padding:0}
@@ -15,7 +15,7 @@
 .home-middle h2 a,.home-middle h2 a:visited{color:#444;text-decoration:none;text-transform:none;font-style:normal}
 .home-middle h2 a:hover{color:#0067a2;text-decoration:none}
 .home-middle h4{}
-.home-middle ul{list-style-type:none;margin:0;padding:0}
+.home-middle ul{list-style-type:none;margin:0;padding:0;width:100%}
 .home-middle ul li{list-style-type:none;margin:0 0 5px 0;padding:0 0 5px 0;float:left;width:50%}
 .home-middle ul ul{list-style-type:none;margin:0;padding:0 0 10px 0}
 .home-middle ul li ul li{margin:0;padding:5px 0 0 0}
@@ -28,9 +28,9 @@
 .home-middle-1{margin:0;padding:0 20px 0 0}
 .home-middle-2{margin:0;padding:0}
 .home-middle-3{margin:0;padding:0}
-#homemidbg1{background:#74a5a7 !important}#homemidbg1 h4{color:#f2dabc;font-size:45px;font-weight:normal;line-height:48px;margin:30px 0}
+#homemidbg1{background:#74a5a7 !important}#homemidbg1 .home-middle{background:url(../../images/about.png) no-repeat bottom right}
+#homemidbg1 h4{color:#f2dabc;font-size:45px;font-weight:normal;line-height:48px;margin:30px 0}
 .about-content{color:#fff;font-size:16px;line-height:34px;width:47%;padding-bottom:100px}
-.about-img{position:absolute;margin-top:-486px;margin-left:466px}
 #homemidbg2{background:#eee !important}#homemidbg2 h4{text-align:center;font-size:40px;color:#4a696b;margin:24px 0 15px;line-height:43px;font-weight:normal}
 .eventList{float:right;width:302px}
 .eventList .event:first-child{border:0}
@@ -43,7 +43,9 @@
 .eventList .event h2{text-transform:uppercase}
 .viewpreviousevents{text-align:right;padding:50px 0}
 .viewpreviousevents a{background:#74a5a7;color:#fff !important;padding:14px 59px;border-radius:5px;font-size:18px}
-#homemidbg3{background:#9aa774 !important}#homemidbg3 h4{color:#fff;font-size:45px;font-weight:normal;line-height:48px;margin-top:30px;margin-bottom:30px;padding-left:509px}
+#homemidbg3{background:#9aa774 !important;padding:0}#homemidbg3 .home-middle{background:url(../../images/contribution.png) no-repeat -118px 0}
+#homemidbg3 .home-middle-3{padding-top:20px}
+#homemidbg3 h4{color:#fff;font-size:45px;font-weight:normal;line-height:48px;margin-top:30px;margin-bottom:30px;padding-left:509px}
 .contribution-content{color:#fff;font-size:16px;line-height:34px;width:47%;padding-bottom:100px;float:right}
 .contribution-img{position:absolute;margin-top:-60px;margin-left:-118px}
 #homemidbg4{background:#6d794a !important;padding:0 !important}#homemidbg4 ul li a{display:block;background:#4f5933;padding:7px;text-align:center;color:#fff !important;font-weight:bold;font-size:16px}
@@ -54,7 +56,7 @@
 #homemidbg5 .sponsor.last{margin-right:0}
 #homemidbg5 .widget{padding-bottom:40px !important}
 #homemidbg6{background:#5b4075 !important}#homemidbg6 .widget{padding-bottom:100px !important}
-.ui-widget-header{position:absolute;width:960px;margin-top:-24px !important}
+.ui-widget-header{position:absolute;max-width:960px;margin-top:-24px !important}
 .vLeft{float:left;width:50%}
 .vLeft .content{padding:0 70px 0 50px}
 .vLeft .content h5{color:#fff;font-size:16px;margin:0;margin-top:19px;font-weight:normal;text-transform:uppercase}

@@ -3,10 +3,10 @@ a,a:visited{color:#0067a2;text-decoration:none}
 a:hover{color:#7ca513;text-decoration:none}
 a img{border:none}
 a:focus,a:hover,a:active{outline:none}
-.home #wrap,.home-page #wrap,.blog #wrap{margin:0 auto 0;padding:0;min-width:960px}
+.home #wrap,.home-page #wrap,.blog #wrap{margin:0 auto 0;padding:0;min-width:768px}
 #wrap{background:#f7f7f7 ;margin:0 auto 0;padding:0}
 #header{margin:0 auto 0;padding:0;background:#9aa774}
-#header .wrap{width:960px;height:100px;margin:0 auto 0}
+#header .wrap{max-width:960px;min-width:768px;height:100px;margin:0 auto 0}
 #title-area{width:340px;float:left;margin:0;padding:20px 0 0 0;overflow:hidden}
 #title-area #title{font-size:20px;font-weight:normal;line-height:34px;margin:0;padding:0 0 0 20px}
 #title-area #title a{color:#fff;margin:0;padding:0;text-decoration:none}
@@ -22,7 +22,7 @@ a:focus,a:hover,a:active{outline:none}
 #title-area{background:url(../../images/logo-inner.png) left no-repeat}
 .header-image #title-area,.header-image #title-area #title,.header-image #title-area #title a{display:block;float:left;width:340px;height:100px;margin:0;padding:0;text-indent:-9999px;overflow:hidden}
 .header-image #title-area #description{display:block;width:0;height:0;overflow:hidden}
-.header-full-width #title-area,.header-full-width #title-area #title{width:960px}
+.header-full-width #title-area,.header-full-width #title-area #title{min-width:768px}
 #header ul.nav,#header ul.menu{width:auto;float:right;list-style:none;color:#fff;margin:0;padding:52px 0 0 0}
 #header ul.nav li,#header ul.menu li{float:left;list-style:none;margin:0;padding:0}
 #header ul.nav li a,#header ul.nav li a:visited,#header ul.menu li a,#header ul.menu li a:visited{color:#fff;display:block;font-family:Arial,Tahoma,Verdana;font-size:12px;margin:0;padding:6px 10px 5px 10px;text-decoration:none;text-transform:uppercase}
@@ -39,7 +39,7 @@ a:focus,a:hover,a:active{outline:none}
 #header ul.nav li:hover ul,#header ul.nav li li:hover ul,#header ul.nav li li li:hover ul,#header ul.nav li.sfHover ul,#header ul.nav li li.sfHover ul,#header ul.nav li li li.sfHover ul,#header ul.menu li:hover ul,#header ul.menu li li:hover ul,#header ul.menu li li li:hover ul,#header ul.menu li.sfHover ul,#header ul.menu li li.sfHover ul,#header ul.menu li li li.sfHover ul{left:auto}
 #header ul.nav li:hover,#header ul.nav li.sfHover,#header ul.menu li:hover,#header ul.menu li.sfHover{position:static}
 #nav{clear:both;color:#fff;margin:0 auto 0;padding:0}
-#nav .wrap{background:#00b8de;width:960px;height:40px;margin:0 auto 0}
+#nav .wrap{background:#00b8de;max-width:960px;min-width:768px;height:40px;margin:0 auto 0}
 #nav ul{width:950px;float:left;list-style:none;margin:0;padding:0 0 0 10px}
 #nav li{float:left;list-style:none;margin:0;padding:0}
 #nav li a{color:#fff;display:block;font-size:14px;font-weight:bold;margin:0;padding:10px 15px 10px 15px;text-decoration:none;text-shadow:#00839e 1px 1px;position:relative}
@@ -63,7 +63,7 @@ a:focus,a:hover,a:active{outline:none}
 #nav li.search{padding:0 10px 0 10px}
 #nav li.twitter a{background:url(../../images/twitter-nav.png) no-repeat left center;padding:3px 0 1px 20px}
 #subnav{clear:both;color:#fff;margin:0 auto 0;padding:0}
-#subnav .wrap{background:#00a8d1;width:960px;height:40px;margin:0 auto 20px}
+#subnav .wrap{background:#00a8d1;max-width:960px;min-width:768px;height:40px;margin:0 auto 20px}
 #subnav ul{width:950px;float:left;list-style:none;margin:0;padding:0 0 0 10px}
 #subnav li{float:left;list-style:none;margin:0;padding:0}
 #subnav li a{color:#fff;display:block;font-size:14px;font-weight:bold;margin:0;padding:10px 15px 10px 15px;text-decoration:none;text-shadow:#00839e 1px 1px;position:relative}
@@ -80,18 +80,18 @@ a:focus,a:hover,a:active{outline:none}
 #subnav li:hover ul ul,#subnav li:hover ul ul ul,#subnav li.sfHover ul ul,#subnav li.sfHover ul ul ul{left:-999em}
 #subnav li:hover ul,#subnav li li:hover ul,#subnav li li li:hover ul,#subnav li.sfHover ul,#subnav li li.sfHover ul,#subnav li li li.sfHover ul{left:auto}
 #subnav li:hover,#subnav li.sfHover{position:static}
-#inner{width:960px;margin:20px auto 20px;padding:0;overflow:hidden}
-.home #inner,.home-page #inner,.blog #inner{width:100%;margin:0}
+#inner{margin:20px auto 20px;padding:0;overflow:hidden}
+.home #inner,.home-page #inner,.blog #inner{width:100%;margin:0 auto}
 .breadcrumb{background:#e8e8e8;margin:0 0 30px 0;padding:5px 0 5px 10px}
 .taxonomy-description{background:#e8e8e8;margin:0 0 30px 0;padding:10px;border:1px solid #ddd}
 #content .taxonomy-description p{margin:0;padding:0}
-#content-sidebar-wrap{width:790px;margin:0;padding:0;float:left}
-.sidebar-content #content-sidebar-wrap,.content-sidebar #content-sidebar-wrap{width:960px}
+#content-sidebar-wrap{max-width:960px;min-width:768px;margin:0;padding:0;float:left}
+.sidebar-content #content-sidebar-wrap,.content-sidebar #content-sidebar-wrap{max-width:960px;min-width:768px}
 .sidebar-sidebar-content #content-sidebar-wrap,.sidebar-content-sidebar #content-sidebar-wrap{float:right}
 #content{width:500px;margin:0;padding:0;float:left}
 .sidebar-content #content,.sidebar-sidebar-content #content{float:right}
 .sidebar-content #content,.content-sidebar #content{width:710px;padding:0}
-.full-width-content #content{width:960px}
+.full-width-content #content{max-width:960px}
 #content img,#content p img{max-width:100%}
 #content blockquote{background:#e8e8e8;margin:0 15px 15px 15px;padding:10px 20px 0 15px}
 #content .post{margin:0 0 40px 0;padding:0}
@@ -207,7 +207,7 @@ img.wp-smiley,img.wp-wink{float:none;border:none;margin:0;padding:0}
 .gform_footer input.button{color:#fff !important}
 .gform_wrapper .gform_footer{border:none !important}
 #footer-widgeted{background:url(../../images/footerbg.png) repeat-x;color:#ddd;margin:0 auto 0;padding:0 0 2px 0;text-shadow:#000 1px 1px;overflow:hidden;clear:both;height:60px}
-#footer-widgeted .wrap{width:960px;margin:0 auto 0}
+#footer-widgeted .wrap{max-width:960px;min-width:768px;margin:0 auto 0}
 #footer-widgeted .widget{margin:0;padding:0 0 5px 0}
 #footer-widgeted h4{color:#fff;font-size:16px;font-family:Arial,Tahoma,Verdana;font-weight:normal;margin:0 0 5px 0;padding:0}
 #footer-widgeted p{margin:0;padding:0}
@@ -222,7 +222,7 @@ img.wp-smiley,img.wp-wink{float:none;border:none;margin:0;padding:0}
 .footer-widgeted-4{float:right;margin:0;padding-top:24px}
 #footer-widgeted .user-profile .avatar{background:#fff;margin:0 0 -5px 0;padding:1px;border:4px solid #eee}
 #footer{color:#444;font-size:14px;margin:0 auto 0;padding:0;clear:both;overflow:hidden;line-height:30px}
-#footer .wrap{width:960px;margin:0 auto 0;padding:30px 0 50px}
+#footer .wrap{max-width:960px;min-width:768px;margin:0 auto 0;padding:30px 0 50px}
 #footer a,#footer a:visited{color:#444;text-decoration:none}
 #footer a:hover{color:#5b4075;text-decoration:underline}
 #footer p{margin:0;padding:0}

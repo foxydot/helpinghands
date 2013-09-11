@@ -6,7 +6,6 @@ require_once(TEMPLATEPATH.'/lib/init.php');
 add_image_size('Slideshow', 500, 260, TRUE);
 add_image_size('Mini', 90, 90, TRUE);
 
-
 remove_action( 'genesis_before_post_content', 'genesis_post_info' ); //remove the info (date, posted by,etc.)
 remove_action( 'genesis_after_post_content', 'genesis_post_meta' ); //remove the meta (filed under, tags, etc.)
 
@@ -201,6 +200,10 @@ function custom_footer_creds_text() {
 }
 
 include_once('lib/inc/events_cpt.php');
+include_once('lib/inc/msd-functions.php');
+
+add_action('genesis_before_content','genesis_get_sidebar');
+remove_action('genesis_after_content','genesis_get_sidebar');
 
 /*
  * Add styles and scripts

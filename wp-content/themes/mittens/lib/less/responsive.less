@@ -8,17 +8,71 @@
 
 @media only screen and (max-width: 959px) {
   /* Enter Your Custom Styles Here */ 
+  .sidebar-content, .content-sidebar{
+    #sidebar,
+     #content{
+       width: 96%;
+    padding: 2%;
+       float: none;
+     }
+    }
 }
 
 /* Mobile */
 
 @media handheld, only screen and (max-width: 767px) {
   /* Enter Your Custom Styles Here */ 
+  .header-full-width{
+    #title-area{
+      background-position: center top;
+      margin: 0 auto;
+      height: 65px;
+      #title{
+        a{height: 55px;}
+      }
+    }
+  }
+  .sidebar-content #content-sidebar-wrap, .content-sidebar #content-sidebar-wrap {
+    min-width: 100%;
+}
+  .blog #wrap, #header .wrap,
+  .header-full-width #title-area, .header-full-width #title-area #title,
+  #footer-widgeted .wrap, #footer .wrap
+  {
+    width: 100%;
+    min-width: 320px;
+  }
+  .added-menu{
+    float: none;
+    margin: 0 auto;
+    display: inline-block;
+  }
+  .added-menu li{
+    margin: 0 .5em;
+  }
+  .added-menu li a{
+  font-size: 12px;
+}
+.added-menu li:hover a{
+  font-size: 12px;
+}
 }
 
 
-@media only screen and (max-width : 480px) {  
-  /* Enter Your Custom Styles Here */   
+@media only screen and (max-width : 479px) {  
+  /* Enter Your Custom Styles Here */ 
+  #content h1.fancy, #content h1.archive-title{
+    padding: 0.5em;
+    background-image: none;
+  }
+  .su-frame-align-left,.su-frame-align-right {float: none;}
+    
+    .added-menu li a{
+  font-size: 10px;
+}
+.added-menu li:hover a{
+  font-size: 10px;
+}
 } 
 
 @media only screen and (max-width : 320px) {  
