@@ -16,6 +16,8 @@ if (!class_exists('MSDEventCPT')) {
             global $current_screen;
             //Actions
             add_action( 'init', array(&$this,'register_cpt_event') );
+            add_action( 'init', array(&$this,'add_event_meta') );
+            add_shortcode('events-gallery', array(&$this,'display_events_gallery'));
         }
         
         function register_cpt_event() {
@@ -57,6 +59,48 @@ if (!class_exists('MSDEventCPT')) {
             );
         
             register_post_type( 'event', $args );
+        }
+
+        function add_event_meta(){
+            global $wpalchemy_media_access;
+
+            if(!class_exists('WPAlchemy_MetaBox')){
+                include_once (WP_CONTENT_DIR.'/wpalchemy/MetaBox.php');
+            }
+            if(!class_exists('WPAlchemy_MediaAccess')){
+                include_once (WP_CONTENT_DIR . '/wpalchemy/MediaAccess.php');
+            }
+            
+            // global styles for the meta boxes
+            if (is_admin()) add_action('admin_enqueue_scripts', 'msdlab_metabox_style');
+            
+            $wpalchemy_media_access = new WPAlchemy_MediaAccess();
+            
+            global $event_meta;
+            $event_meta = new WPAlchemy_MetaBox(array
+            (
+                'id' => '_event_meta',
+                'title' => 'Event Meta',
+                'types' => array('event'), // added only for pages and to custom post type "events"
+                'context' => 'normal', // same as above, defaults to "normal"
+                'priority' => 'high', // same as above, defaults to "high"
+                'template' => get_stylesheet_directory_uri().'/lib/template/event-meta.php',
+                'autosave' => TRUE,
+                'mode' => WPALCHEMY_MODE_EXTRACT, // defaults to WPALCHEMY_MODE_ARRAY
+                'prefix' => '_event_' // defaults to NULL
+            ));
+        }
+
+        function msdlab_metabox_style() {
+            wp_enqueue_style('wpalchemy-metabox', get_stylesheet_directory_uri() . '/lib/css/meta.css');
+        }
+
+        function display_events_gallery($atts){
+            extract( shortcode_atts( array(
+                'num_posts' => 5,
+                'date' => 'past',
+            ), $atts ) );
+            
         }       
   } //End Class
 } //End if class exists statement
