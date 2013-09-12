@@ -1,0 +1,6 @@
+#postdivrich{display:none}
+.my_meta_control .table{display:table}.my_meta_control .table .row{display:table-row;padding-left:1em;cursor:move}.my_meta_control .table .row .cell{display:table-cell;padding:0 6px}
+.my_meta_control .table .row .cell:first-child{padding-left:20px}
+.even{background:#eee}
+.odd{background:#fff}
+.file input[type="text"]{width:75%}

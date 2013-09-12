@@ -35,11 +35,9 @@
 	<div class="home-middle">
 		<div class="home-middle-2">
         	
-			<?php ///if (!dynamic_sidebar('Home Middle #2')) : ?>
+			<?php //if (!dynamic_sidebar('Home Middle #2')) : ?>
             <h4>Events</h4>
-			<div class="widget">
-				<?php do_shortcode('[contentSlideshow]'); ?>
-			</div>
+			<?php print do_shortcode('[events-gallery]'); ?>
             <div class="viewpreviousevents">
             	<a href="/event" class="">View Previous Events</a>
             </div>

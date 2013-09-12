@@ -1,17 +1,12 @@
 <?php global $wpalchemy_media_access; ?>
-<style>
-    #postdivrich {display: none;} 
-    .my_meta_control .table {display: table;}
-    .my_meta_control .row {display: table-row;padding-left: 1em;cursor: move;}
-    .my_meta_control .cell {display: table-cell;padding: 0 6px;}
-    .my_meta_control .cell:first-child {padding-left: 20px;}
-    .even {background: #eee;}
-    .odd {background: #fff;}
-    .file input[type="text"] {width: 75%}
-</style>
 <div class="my_meta_control">
  <p id="warning" style="display: none;background:lightYellow;border:1px solid #E6DB55;padding:5px;">Order has changed. Please click Save or Update to preserve order.</p>
-        
+
+    <h4>Event Date</h4>  
+    
+    <?php $mb->the_field('event_date'); ?>
+    <input type="text" class="datepicker" name="<?php $mb->the_name(); ?>" value="<?php $mb->the_value(); ?>"/>
+     
     <h4>Add Files</h4>
 
     <div class="table">
@@ -47,14 +42,16 @@
     <?php $mb->the_group_close(); ?>
     <?php endwhile; ?>
     </div>
-    <p style="margin-bottom:15px; padding-top:5px;"><a href="#" class="docopy-otherdocs button">Add Document</a>
-    <a href="#" class="dodelete-otherdocs button">Remove All Documents</a></p>
+    <p style="margin-bottom:15px; padding-top:5px;"><a href="#" class="docopy-otherfiles button">Add Document</a>
+    <a href="#" class="dodelete-otherfiles button">Remove All Documents</a></p>
 </div>
 <script>
 jQuery(function($){
-    $("#wpa_loop-bottles").sortable({
+    $("#wpa_loop-otherfiles").sortable({
         change: function(){
             $("#warning").show();
         }
     });
-});</script>
+    $( ".datepicker" ).datepicker();
+});
+</script>

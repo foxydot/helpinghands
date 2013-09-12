@@ -1,3 +1,4 @@
+@import 'mixins';
 .home #header {
   /*margin: 0 auto 0;
   padding: 0;
@@ -141,7 +142,7 @@
   width: 100%;
   }
   
-.home-middle ul li {
+.home-middle #tabs ul li {
   list-style-type: none;
 margin: 0 0 5px 0;
 padding: 0 0 5px 0;
@@ -244,14 +245,56 @@ width: 50%;
   }
 }
 
+.bootstrap-gallery{
+  width: 100%;
+  .nav-tabs {border: 0;}
+  .nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus{border: none;}
+  ul.nav{
+    height: 300px;
+    width: 33.3%;
+    float: right;
+    li{
+      display: block;
+      float: none;
+      z-index:50;
+      position: relative;
+      border: 0 !important;
+      background-color:#E8E8E5;
+      height: 20%;
+      a{
+        height: 92%;
+        padding: 4%;
+        border: 0;
+      }
+    }
+    li.active, li:hover{
+      background: url(../../images/active-event.png) no-repeat left center !important;
+      margin-left: -17px !important;
+      padding-left: 17px !important;
+      border: 0 !important;
+      a{
+        border: 0;
+      }
+    }
+  }
+  .tab-content {
+    width: 66.6%;
+    float: left;
+    .carousel-inner{
+      .item{
+        width:100%;
+        height: 300px;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center center;
+      }
+    }
+  }
+}
+.bootstrap-gallery:after{
+  .clearfix();
+}
 
-.eventList{
-  float:right;
-  width: 302px;
-}
-.eventList .event:first-child{
-  border:0;
-}
 .eventList .event{
   background: #e8e8e5;
 border-top: 1px solid #f1f1f1;
@@ -571,3 +614,4 @@ float: left;
 .entry-title{
   display:none; 
 }
+

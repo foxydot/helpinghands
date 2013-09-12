@@ -1,0 +1,1 @@
+jQuery(document).ready(function(e){e("#tabs").tabs().addClass("ui-tabs-vertical ui-helper-clearfix");e("#tabs li").removeClass("ui-corner-top").addClass("ui-corner-left")});
