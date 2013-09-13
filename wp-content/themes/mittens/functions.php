@@ -185,6 +185,13 @@ function msd_fancy_post_title(){
 
     echo apply_filters( 'genesis_post_title_output', "$output \n" );
 }
+
+/** remove a plugin stylesheet **/
+add_action('wp_footer','msdlab_remove_gct_css', 1000);
+function msdlab_remove_gct_css(){
+    wp_dequeue_style('gctwidgetstyles');
+    wp_deregister_style('gctwidgetstyles');
+}
 /** Customize the entire footer */
 remove_action( 'genesis_footer', 'genesis_do_footer' );
 add_action( 'genesis_footer', 'custom_footer_creds_text' );
