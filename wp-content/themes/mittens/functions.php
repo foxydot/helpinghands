@@ -214,13 +214,13 @@ add_action('wp_enqueue_scripts', 'msdlab_add_scripts');
 function msdlab_add_styles() {
     global $is_IE;
     if(!is_admin()){
+       wp_enqueue_style('bootstrap-style','//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.no-icons.min.css');
        wp_enqueue_style('msd-style',get_stylesheet_directory_uri().'/lib/css/style.css');
        wp_enqueue_style('msd-responsive',get_stylesheet_directory_uri().'/lib/css/responsive.css');
         if($is_IE){
             wp_enqueue_script('ie-style',get_stylesheet_directory_uri().'/lib/css/ie.css');
         }
         if(is_front_page()){
-            wp_enqueue_style('bootstrap-style','//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.no-icons.min.css');
             wp_enqueue_style('msd-homepage-style',get_stylesheet_directory_uri().'/lib/css/homepage.css');
             wp_enqueue_style('msd-homepage-responsive',get_stylesheet_directory_uri().'/lib/css/responsive-home.css');
         }

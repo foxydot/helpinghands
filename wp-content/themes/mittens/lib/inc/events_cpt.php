@@ -170,68 +170,39 @@ if (!class_exists('MSDEventCPT')) {
         }       
 
  function display_single_event_gallery($atts){
-            global $event_meta;
+            global $post,$event_meta;
             extract( shortcode_atts( array(
-                'num_posts' => 5,
-                'date' => 'past',
             ), $atts ) );
-            $args = array(
-                'post_type' => 'event',
-                'num_posts' => $num_posts,
-            );
-            $myposts = get_posts($args);
-            $i = 0;
-            foreach($myposts AS $mypost){
-                //ts_data($mypost);
-                $event_meta->the_meta($mypost->ID);
-                $active = $i==0?'active':'';
-                $thumb = wp_get_attachment_image_src(get_post_thumbnail_id($mypost->ID),'full');
-                $carousel = '<div style="background-image: url('.$thumb[0].');" class="item active">
+
+            $event_meta->the_meta($post->ID);
+            $i == 0;
+            while($event_meta->have_fields('otherfiles')):
+            
+                $active = $i==0?' active':'';
+                $carousel .= '
+                <div style="background-image: url('.$event_meta->get_the_value(downloadurl).');" class="item'.$active.'">
                     <div class="container">
                         <div class="carousel-caption">
                             
                         </div>
                     </div>
                 </div>';
-                
-                while($event_meta->have_fields('otherfiles')):
-                    $carousel .= '
-                    <div style="background-image: url('.$event_meta->get_the_value(downloadurl).');" class="item">
-                        <div class="container">
-                            <div class="carousel-caption">
-                                
-                            </div>
-                        </div>
-                    </div>';
-                endwhile; //end loop
-                
-                $tabs .= '<li class="'.$active.'"><a href="#pane'.$i.'" data-toggle="tab">'.$mypost->post_title.'</a></li>';
-                $panes .= '
-                <div id="pane'.$i.'" class="tab-pane '.$active.'">
-                    <div id="carousel'.$i.'" class="carousel slide">
-                    <div class="carousel-inner">
-                  '.$carousel.'
-                    </div>
-                    <!-- Controls -->
-                      <a class="left carousel-control" href="#carousel'.$i.'" data-slide="prev">
-                        <span class="icon-prev"></span>
-                      </a>
-                      <a class="right carousel-control" href="#carousel'.$i.'" data-slide="next">
-                        <span class="icon-next"></span>
-                      </a>
-                    </div>
-                </div>';
                 $i++;
-            }
-            $ret = '
-            <div class="bootstrap-gallery">
-              <ul class="nav nav-tabs">
-                '.$tabs.'
-              </ul>
-              <div class="tab-content">
-                '.$panes.'
-              </div><!-- /.tab-content -->
-            </div><!-- /.tabbable -->';
+            endwhile; //end loop
+            
+           $ret = '
+                <div id="carousel'.$i.'" class="carousel slide">
+                <div class="carousel-inner">
+              '.$carousel.'
+                </div>
+                <!-- Controls -->
+                  <a class="left carousel-control" href="#carousel'.$i.'" data-slide="prev">
+                    <span class="icon-prev"></span>
+                  </a>
+                  <a class="right carousel-control" href="#carousel'.$i.'" data-slide="next">
+                    <span class="icon-next"></span>
+                  </a>
+                </div>';
         print $ret;
         }       
   } //End Class
