@@ -39,7 +39,7 @@
             <h4>Events</h4>
 			<?php print do_shortcode('[events-gallery]'); ?>
             <div class="viewpreviousevents">
-            	<a href="/event" class="">View Previous Events</a>
+            	<a href="/event" class="">View All Events</a>
             </div>
 			<?php //endif; ?>
 		</div><!-- end .home-middle-2 -->
