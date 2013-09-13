@@ -29,7 +29,8 @@
         <input type="text" name="<?php $mb->the_name(); ?>" value="<?php $mb->the_value(); ?>"/>
         </div><div class="cell file">
         <?php $mb->the_field('downloadurl'); ?>
-        <?php $wpalchemy_media_access->setGroupName('otherfilesdl'. $mb->get_the_index())->setInsertButtonLabel('Insert This')->setTab('gallery'); ?>
+        <?php $groupname = 'otherfiles_'. $mb->get_the_index(); ?>
+        <?php $wpalchemy_media_access->setGroupName($groupname)->setInsertButtonLabel('Insert This')->setTab('gallery'); ?>
         
         <?php echo $wpalchemy_media_access->getField(array('name' => $mb->get_the_name(), 'value' => $mb->get_the_value())); ?>
         <?php echo $wpalchemy_media_access->getButton(array('label' => '+')); ?>
