@@ -85,7 +85,7 @@ a:focus,a:hover,a:active{outline:none}
 .breadcrumb{background:#e8e8e8;margin:0 0 30px 0;padding:5px 0 5px 10px}
 .taxonomy-description{background:#e8e8e8;margin:0 0 30px 0;padding:10px;border:1px solid #ddd}
 #content .taxonomy-description p{margin:0;padding:0}
-#content-sidebar-wrap{max-width:960px;min-width:768px;margin:0;padding:0;float:left}
+#content-sidebar-wrap{max-width:960px;min-width:768px;margin:0 auto;padding:0}
 .sidebar-content #content-sidebar-wrap,.content-sidebar #content-sidebar-wrap{max-width:960px;min-width:768px}
 .sidebar-sidebar-content #content-sidebar-wrap,.sidebar-content-sidebar #content-sidebar-wrap{float:right}
 #content{width:500px;margin:0;padding:0;float:left}
@@ -117,7 +117,7 @@ a:focus,a:hover,a:active{outline:none}
 #content h1,#content h2,#content h3,#content h4,#content h5,#content h6{color:#444;font-weight:normal;text-decoration:none;margin:0 0 5px 0;padding:0}
 #content h1{font-size:20px;border-bottom:1px solid #ddd;margin:0;padding:0 0 5px 0}
 #content h1.fancy,#content h1.archive-title{background-color:#9aa774;background-repeat:no-repeat;background-position:top left;padding:260px 0 20px 20px;font-size:30px;color:#fff;margin-bottom:1em}
-.post-type-archive-event #content h1.archive-title{background-image:url(../../images/events-bkg.jpg)}
+.post-type-archive-event #content h1.archive-title{display:none}
 #content h2{font-size:18px;border-bottom:1px solid #ddd;margin:0;padding:0 0 5px 0}
 #content h2 a,#content h2 a:visited{color:#444;text-decoration:none}
 #content h2 a:hover{color:#73ab01;text-decoration:none}
