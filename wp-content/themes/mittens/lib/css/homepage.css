@@ -87,6 +87,6 @@
 .conRight .content .left label,.conRight .content .right label,.conRight .content .left input[type=text],.conRight .content .right textarea{display:block;margin:0 !important}
 .conRight .content .left input[type=text],.conRight .content .right textarea{border:0;border-radius:3px;padding:8px 5px;margin-bottom:8px !important;width:88%;font-size:16px}
 .conRight .content .right textarea{height:184px;width:96%}
-.downloadapp{background:#8460a8;padding:16px 20px;display:block;width:200px;text-align:center;font-size:18px;color:#fff !important;border-radius:6px;margin-top:12px}
+.downloadapp{background:#8460a8;padding:16px 20px;display:block;text-align:center;font-size:18px;color:#fff !important;border-radius:6px;margin-top:12px}
 .contactus{background:#8460a8;padding:13px 20px;text-align:center;font-size:14px;color:#fff !important;border-radius:6px;margin-top:12px;border:0;float:left}
 .entry-title{display:none}
