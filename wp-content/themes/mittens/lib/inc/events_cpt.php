@@ -114,8 +114,13 @@ if (!class_exists('MSDEventCPT')) {
                 'num_posts' => $num_posts,
             );
             $myposts = get_posts($args);
-            $i = 0;
             foreach($myposts AS $mypost){
+                $event_meta->the_meta($mypost->ID);
+                $events[strtotime($event_meta->get_the_value(event_date))] = $mypost;
+            }
+            ksort($events);
+            $i = 0;
+            foreach($events AS $mypost){
                 //ts_data($mypost);
                 $event_meta->the_meta($mypost->ID);
                 $active = $i==0?'active':'';
