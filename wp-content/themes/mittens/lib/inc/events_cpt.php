@@ -118,7 +118,7 @@ if (!class_exists('MSDEventCPT')) {
                 $event_meta->the_meta($mypost->ID);
                 $events[strtotime($event_meta->get_the_value(event_date))] = $mypost;
             }
-            ksort($events);
+            krsort($events);
             $i = 0;
             foreach($events AS $mypost){
                 //ts_data($mypost);
