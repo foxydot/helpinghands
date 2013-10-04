@@ -17,7 +17,7 @@
 .home-middle h2 a:hover{color:#0067a2;text-decoration:none}
 .home-middle h4{}
 .home-middle ul{list-style-type:none;margin:0;padding:0;width:100%}
-.home-middle #tabs ul li{list-style-type:none;margin:0 0 5px 0;padding:0 0 5px 0;float:left;width:50%}
+.home-middle #tabs>ul>li{list-style-type:none;margin:0 0 5px 0;padding:0 0 5px 0;float:left;width:50%}
 .home-middle ul ul{list-style-type:none;margin:0;padding:0 0 10px 0}
 .home-middle ul li ul li{margin:0;padding:5px 0 0 0}
 .home-middle .widget{margin:0;padding:0 0 5px 0}
@@ -68,10 +68,11 @@
 .vLeft .content h4{color:#f2dabc;font-size:36px;font-weight:normal;line-height:42px;margin:13px 0 22px}
 .vLeft .content p{color:#fff;font-size:15px;line-height:28px}
 .vRight{float:left;width:50%}
-.vRight .content{padding:0 70px 0 50px}
+.vRight .content{padding:0 70px 0 50px}.vRight .content .gform_wrapper{margin:0}.vRight .content .gform_wrapper br{display:none}
+.vRight .content .gform_wrapper .gform_fields li.gfield{margin:0}.vRight .content .gform_wrapper .gform_fields li.gfield .ginput_container .ginput_left,.vRight .content .gform_wrapper .gform_fields li.gfield .ginput_container .ginput_right{float:none;width:100%}.vRight .content .gform_wrapper .gform_fields li.gfield .ginput_container .ginput_left input[type=text],.vRight .content .gform_wrapper .gform_fields li.gfield .ginput_container .ginput_right input[type=text]{padding:9px 5px;border-radius:5px;border:0;width:79% !important;margin:4px 0}
+.vRight .content .gform_wrapper .gform_fields li.gfield .ginput_container input[type=text]{padding:9px 5px;border-radius:5px;border:0;width:79% !important;margin:4px 0}
 .vRight .content p{padding:0 !important;margin:0 !important}
 .vRight .content p label{font-weight:bold;color:#f7dbb4}
-.vRight .content input[type=text]{padding:9px 5px;border-radius:5px;border:0;width:79%;margin:4px 0}
 .vRight .content input[type=checkbox]{margin:15px 10px 12px 0}
 .vRight .content input[type=button]{border:0;padding:14px 30px;border-radius:5px;background:#9aa774;color:#fff;font-size:19px;margin:4px 0}
 .ui-tabs-panel{padding-top:50px}
@@ -81,7 +82,12 @@
 .conLeft .content h4{color:#f2dabc;font-size:36px;font-weight:normal;line-height:42px;margin:13px 0 22px}
 .conLeft .content p{color:#fff;font-size:15px;line-height:28px}
 .conRight{float:left;width:60%;margin-top:35px}
-.conRight .content{padding:25px;color:#fff}
+.conRight .content{padding:0 25px;color:#fff}.conRight .content form{position:relative}
+.conRight .content .gform_wrapper{margin:0}.conRight .content .gform_wrapper br{display:none}
+.conRight .content .gform_wrapper .gform_fields{position:relative}.conRight .content .gform_wrapper .gform_fields .gfield{width:50%}
+.conRight .content .gform_wrapper .gform_fields #field_1_4{position:absolute;top:0;right:0}.conRight .content .gform_wrapper .gform_fields #field_1_4 textarea{height:184px;width:96%}
+.conRight .content .gform_wrapper input[type=text],.conRight .content .gform_wrapper textarea{border:0;border-radius:3px;padding:8px 5px;margin-bottom:8px !important;width:88%;font-size:16px}
+.conRight .content .gform_footer{width:50%;position:absolute;right:0}.conRight .content .gform_footer .gform_button{background:#8460a8;padding:13px 20px;text-align:center;font-size:14px;color:#fff !important;border-radius:6px;margin-top:12px;border:0;float:left}
 .conRight .content .left{float:left;width:50%;line-height:10px;margin-top:2px}
 .conRight .content .right{float:left;width:50%;line-height:10px}
 .conRight .content .left label,.conRight .content .right label,.conRight .content .left input[type=text],.conRight .content .right textarea{display:block;margin:0 !important}

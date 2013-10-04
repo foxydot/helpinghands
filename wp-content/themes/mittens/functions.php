@@ -218,6 +218,13 @@ remove_action('genesis_after_content','genesis_get_sidebar');
 add_action('wp_enqueue_scripts', 'msdlab_add_styles');
 add_action('wp_enqueue_scripts', 'msdlab_add_scripts');
 
+
+function remove_gravityforms_style() { 
+    wp_dequeue_style('gforms_css');
+    wp_dequeue_style('gforms_formsmain_css');
+    wp_dequeue_style('gforms_ready_class_css');
+}
+
 function msdlab_add_styles() {
     global $is_IE;
     if(!is_admin()){
@@ -230,6 +237,8 @@ function msdlab_add_styles() {
         if(is_front_page()){
             wp_enqueue_style('msd-homepage-style',get_stylesheet_directory_uri().'/lib/css/homepage.css');
             wp_enqueue_style('msd-homepage-responsive',get_stylesheet_directory_uri().'/lib/css/responsive-home.css');
+            add_action('wp_print_styles', 'remove_gravityforms_style',99);
+            add_action('wp_footer', 'remove_gravityforms_style',99);
         }
     }
 }

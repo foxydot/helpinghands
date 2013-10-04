@@ -202,8 +202,8 @@ img.wp-smiley,img.wp-wink{float:none;border:none;margin:0;padding:0}
 #wp-calendar td{font-weight:normal;text-align:center;margin:0;padding:2px}
 #footer-widgeted #wp-calendar td{background:none}
 #wp-calendar tfoot td{background:none;margin:0;padding:0}
-.gform_footer .button{background:url(../../images/button.png);color:#fff;font-size:11px;font-family:Arial,Tahoma,Verdana;font-weight:bold;text-decoration:none;text-shadow:#436d04 1px 1px;text-transform:uppercase;margin:0;padding:3px 5px 3px 5px;border:1px solid #73ab00}
-.gform_footer .button:hover{background:url(../../images/button-hover.png);border:1px solid #73ab00}
+.gform_wrapper .gform_footer{clear:both;margin:0 !important;padding:0 !important}
+.gform_footer .button{border:0;padding:14px 30px;border-radius:5px;background:#9aa774;color:#fff;font-size:19px !important;margin:4px 0}
 .gform_footer input.button{color:#fff !important}
 .gform_wrapper .gform_footer{border:none !important}
 #footer-widgeted{background:url(../../images/footerbg.png) repeat-x;color:#ddd;margin:0 auto 0;padding:0 0 2px 0;text-shadow:#000 1px 1px;overflow:hidden;clear:both;height:60px}

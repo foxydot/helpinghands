@@ -142,7 +142,7 @@
   width: 100%;
   }
   
-.home-middle #tabs ul li {
+.home-middle #tabs>ul>li {
   list-style-type: none;
 margin: 0 0 5px 0;
 padding: 0 0 5px 0;
@@ -485,6 +485,35 @@ margin: 13px 0 22px;
 }
 .vRight .content{
   padding: 0 70px 0 50px;
+  .gform_wrapper{
+    margin:0;
+    br {display: none;}
+    .gform_fields{
+      li.gfield{
+        margin: 0;
+        .ginput_container{
+    .ginput_left,.ginput_right{
+      float: none;
+      width: 100%;
+      input[type=text]{
+              padding: 9px 5px;
+            border-radius: 5px;
+            border: 0;
+            width: 79% !important;
+            margin: 4px 0;
+            }
+    }
+          input[type=text]{
+              padding: 9px 5px;
+            border-radius: 5px;
+            border: 0;
+            width: 79% !important;
+            margin: 4px 0;
+            }
+        }
+      }
+    }
+  }
 }
 .vRight .content p{
   padding:0 !important;
@@ -493,13 +522,6 @@ margin: 13px 0 22px;
 .vRight .content p label{
   font-weight:bold;
   color:#f7dbb4;
-}
-.vRight .content input[type=text]{
-  padding: 9px 5px;
-border-radius: 5px;
-border: 0;
-width: 79%;
-margin: 4px 0;
 }
 .vRight .content input[type=checkbox]{
   margin: 15px 10px 12px 0;
@@ -555,8 +577,50 @@ margin: 13px 0 22px;
   margin-top: 35px;
 }
 .conRight .content{
-  padding:25px;
+  padding:0 25px;
   color:#fff;
+  form{position: relative;}
+  .gform_wrapper{
+    margin:0;
+    br {display: none;}
+    .gform_fields{
+      position: relative;
+    .gfield {
+      width: 50%;
+    }
+    #field_1_4{
+      position: absolute;
+      top: 0;
+      right: 0;textarea {
+    height: 184px;
+    width: 96%;}
+    }
+  }
+  input[type=text],textarea{
+              border: 0;
+border-radius: 3px;
+padding: 8px 5px;
+margin-bottom: 8px !important;
+width: 88%;
+font-size: 16px;
+            }
+          }
+   .gform_footer{
+     width: 50%;
+     position: absolute;
+     right: 0;
+     .gform_button{
+       background: #8460a8;
+padding: 13px 20px;
+text-align: center;
+font-size: 14px;
+color: #fff !important;
+border-radius: 6px;
+margin-top: 12px;
+border: 0;
+float: left;
+     }
+   }
 }
 .conRight .content .left{
   float:left;

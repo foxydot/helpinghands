@@ -1,6 +1,5 @@
 <?php get_header(); ?>
 <?php genesis_home(); ?>
-
 <div id="home-top-bg" style="margin-top:70px;">
 	<div id="home-top">
 	        
