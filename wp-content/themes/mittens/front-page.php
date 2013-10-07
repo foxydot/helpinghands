@@ -38,7 +38,7 @@
             <h4>Events</h4>
 			<?php print do_shortcode('[events-gallery]'); ?>
             <div class="viewpreviousevents">
-            	<a href="<?php print site_url('/event'); ?>" class="">View All Events</a>
+            	<a href="<?php print site_url('/event'); ?>" class="">2013 Hometown Signup</a>
             </div>
 			<?php //endif; ?>
 		</div><!-- end .home-middle-2 -->
