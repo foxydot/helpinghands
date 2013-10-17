@@ -38,7 +38,11 @@
             <h4>Events</h4>
 			<?php print do_shortcode('[events-gallery]'); ?>
             <div class="viewpreviousevents">
-            	<a href="<?php print site_url('/event'); ?>" class="">2013 Hometown Signup</a>
+                <?php
+                    //get the info for the event registration page
+                    $event_registration_page = get_page_by_path('event-registration');
+                 ?>
+            	<a href="<?php print site_url('/event-registration'); ?>" class=""><?php print $event_registration_page->post_title; ?></a>
             </div>
 			<?php //endif; ?>
 		</div><!-- end .home-middle-2 -->
