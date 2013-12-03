@@ -41,8 +41,12 @@
                 <?php
                     //get the info for the event registration page
                     $event_registration_page = get_page_by_path('event-registration');
+                    if($event_registration_page->post_status == 'publish'){
                  ?>
-            	<a href="<?php print site_url('/event-registration'); ?>" class=""><?php print $event_registration_page->post_title; ?></a>
+            	   <a href="<?php print site_url('/event-registration'); ?>" class=""><?php print $event_registration_page->post_title; ?></a>
+            	<?php } else { ?>
+            	   <a href="<?php print site_url('/event'); ?>" class="">View our Galleries</a>
+            	<?php } ?>
             </div>
 			<?php //endif; ?>
 		</div><!-- end .home-middle-2 -->
